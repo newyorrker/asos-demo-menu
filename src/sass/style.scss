@@ -1,0 +1,157 @@
+html {
+	font-family: $base-font;
+	font-size: 14px;
+}
+body {
+	height: 800px;
+}
+.container {
+	width: 7%;
+	margin: 0 auto;
+	// text-align: center;
+}
+.drop-down {
+	margin: 10px 0 0 0;
+	width: 93px;
+	position: relative;
+
+	.flag-wrap {
+		padding-bottom: 7px;
+		text-align: right;
+		padding-right: 11px;
+	}
+}
+.drop-down .flag {
+	cursor: pointer;
+	position: relative;
+	&:before {
+		display: block;
+		position: absolute;
+		top: 3px;
+		left: -20px;
+		content: "";
+		background-image: url(../images/flags.png);
+		background-position: 0 11px;
+		width: 16px;
+		height: 11px;
+	}
+	&:after {
+		content: "";
+		right: -9px;
+		top: 6px;
+		position: absolute;
+		border-color: #000 transparent transparent;
+	    border-style: solid;
+	    border-width: 5px 3px;
+	}
+	&:hover {
+		color: #888;
+		&:after {
+			border-color: #888 transparent transparent;
+		}
+	}
+}
+.drop-down__inner {
+	// display: none;
+	width: 230px;
+	right: 0;
+	overflow: hidden;
+	position: absolute;
+	transition: height .2s;
+	background-color: #f4f4f4;
+	font-family: Tahoma;
+	font-size: 11.5px;
+	color: #444;
+}
+.drop-down__country-name {
+	border: 1px #c8c8c8 solid;
+	border-width: 1px 0 1px 0;
+	position: relative;
+	background-color: #ededed;
+	padding: 12px 0 10px 40px;
+	font-family: Georgia;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #222;
+	span {
+		&:before {
+			display: block;
+			position: absolute;
+			top: 10px;
+			left: 15px;
+			content: "";
+			background-image: url(../images/flags.png);
+			background-position: 0 11px;
+			width: 16px;
+			height: 11px;
+		}
+	}
+}
+.drop-down__currency-change {
+	padding: 13px 14px 0;
+	select {
+		margin-top: 11px;
+		width: 80%;
+		height: 18px;
+		font-family: Tahoma;
+		font-size: 11px;
+	}
+}
+.drop-down__country-change {
+	padding: 17px 14px 13px;
+}
+.country-change__list {	
+	padding-top: 11px;
+	li {
+		position: relative;
+		margin-top: 8px;
+		padding: 0 0 7px 27px;
+		border-bottom: 1px #e3e3e3 solid;
+		&:before {
+			display: block;
+			position: absolute;
+			top: 0px;
+			left: 1px;
+			content: "";
+			background-image: url(../images/flags.png);
+			background-position: 0 11px;
+			width: 16px;
+			height: 11px;
+		}
+	}
+	li.gbr {
+		&:before {
+			background-position: 0 22px;
+		}
+	}
+	li.usa {
+		&:before {
+			background-position: 0 33px;
+		}
+	}
+	li.fr {
+		&:before {
+			background-position: 0 55px;
+		}
+	}
+	li.ger {
+		&:before {
+			background-position: 0 66px;
+		}
+	}
+	li.it {
+		&:before {
+			background-position: 0 33px;
+		}
+	}
+	li.esp {
+		&:before {
+			background-position: 0 77px;
+		}
+	}
+	li.au {
+		&:before {
+			background-position: 0 0px;
+		}
+	}
+}
